@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import News from '../../pages/News';
+// import News from '../../pages/News';
 import Pics from '../../pages/Pics';
 import Visual from '../../pages/Visual';
 

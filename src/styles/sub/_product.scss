@@ -1,63 +1,154 @@
-//백그라운드 스타일 재조정 테스트
+.product-page {
+	position: relative;
+	z-index: 1;
+	color: #fff;
 
-.main{
-	padding: 10vh 10vw;
-}
+	.background-video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
 
-.product-page{
+			video {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transform: translate(-50%, -50%);
+					z-index: -1;
+			}
+	}
 
 	.center-text {
-		position: absolute;
-		color: #fff;
-		font-size: 2.5rem;
-		font-family: 'armini', sans-serif;
-		text-align: center;
-		margin-top: -50px;
+			font-family: 'amiri';
+			position: relative;
+			top: 10%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 2rem;
+			color: #fff;
+			z-index: 1;
 	}
 
 	.productList {
-		position: relative;
-		width: 100vw;
-		height: 150vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		// text-align: center;
-		// margin-left: -170px;
-		margin-top: 150px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			z-index: 2;
+			flex-wrap: wrap;
 
-		.pic {
-		position: relative;
-		width: 100px; /* 이미지 크기 조정 */
-		height: 100px; // 높이 값 오토로 놓으면 반영할 부모 값이 없어서 이미지 안보임
-		border-radius: px;
-		overflow: hidden;
-		}
-		h3{
-			font-family: 'armini';
-		}
+			&.mobile {
+					flex-direction: column;
+					align-items: center;
+			}
 	}
-}
 
-@media screen and (max-width: $tablet) {
-	.product {
-		.productList {
-			article {
-				width: 47%;
-				margin-bottom: 50px;
-				.pic {
-					height: 40vw;
-				}
+	.product-item {
+			position: absolute;
+			transition: transform 0.3s ease;
+
+			.name {
+					margin-top: 400%;
+					font-size: 1.2rem;
+					color: #fff;
+					text-align: center;
+					padding: 5px;
+					border-radius: 5px;
+					z-index: 2;
 			}
-		}
 	}
-}
-@media screen and (max-width: $mobile) {
-	.product {
-		.productList {
-			article {
-				width: 100%;
+
+	.hovered-image {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 3;
+
+			img {
+					width: 85%;
+					height: 85%;
+					border: 8px solid #fff;
 			}
-		}
+	}
+
+	.mobile-image {
+			width: 100px;
+			height: auto;
+			border: 3px solid #fff;
+			border-radius: 5px;
+			margin-top: 10px;
+			transition: transform 0.3s ease;
+	}
+
+	@media screen and (max-width: $tablet) {
+			.center-text {
+					font-size: 1.5rem;
+					top: 5%;
+			}
+
+			.productList {
+					flex-direction: row;
+					transform: none;
+			}
+
+			.product-item {
+					.name {
+							font-size: 1rem;
+					}
+			}
+
+			.hovered-image img {
+					max-width: 300px;
+			}
+
+			.background-video article {
+					width: 47%;
+					margin-bottom: 50px;
+
+					.pic {
+							height: 40vw;
+					}
+			}
+	}
+
+	@media screen and (max-width: $mobile) {
+			background: url('eclipse.jpg') no-repeat center center / cover;
+
+			.background-video {
+					display: none; /* 배경 비디오 숨김 */
+			}
+
+			.center-text {
+					font-size: 1.2rem;
+					top: 3%;
+			}
+
+			.productList {
+					flex-direction: column;
+					transform: none;
+			}
+
+			.product-item {
+					position: relative;
+
+					.name {
+							font-size: 0.9rem;
+							padding: 3px;
+					}
+
+					.mobile-image {
+							max-width: 300px;
+					}
+			}
+
+			.background-video article {
+					width: 100%;
+			}
 	}
 }

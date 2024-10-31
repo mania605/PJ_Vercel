@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import Layout from '../common/Layout';
-import BackgroundVideo from './BackgroundVideo';
-// import Pic from '../common/Pic';
+import BackgroundVideo from './backgroundVideo';
+import Pic from '../common/Pic';
 
 export default function Product() {
     const [Flickr, setFlickr] = useState([]);
     const [hoveredImage, setHoveredImage] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         const method = 'flickr.people.getPhotos';
@@ -19,37 +20,55 @@ export default function Product() {
             .then(json => {
                 setFlickr(json.photos.photo);
             });
-    }, []);
 
-    const totalImages = Flickr.length;
-    const angleStep = 360 / totalImages;
+        // 화면 크기에 따라 모바일 환경인지 확인
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className="product-page">
-            <BackgroundVideo />
-            <Layout title={"Product"}>
+            <div className="background-video">
+                <BackgroundVideo />
+            </div>
+            <Layout title={"Products"}>
                 <div className="center-text">AVALLION UNIVERSE</div>
-                <section className="productList">
+                <section className={`productList ${isMobile ? 'mobile' : ''}`}>
                     {Flickr.map((data, idx) => {
-                        const rotation = angleStep * idx;
+                        const imageUrl = `https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_z.jpg`;
                         return (
                             <article
                                 key={idx}
+                                className="product-item"
                                 style={{
-                                    position: "absolute",
-                                    transform: `rotate(${rotation}deg) translate(20vw) rotate(-${rotation}deg)`,
+                                    transform: !isMobile
+                                        ? `rotate(${(360 / Flickr.length) * idx}deg) translate(20vw) rotate(-${(360 / Flickr.length) * idx}deg)`
+                                        : 'none',
                                 }}
                             >
                                 <h3
-                                    onMouseEnter={() => setHoveredImage(`https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_z.jpg`)}
+                                    className="name"
+                                    onMouseEnter={() => !isMobile && setHoveredImage(imageUrl)}
                                     onMouseLeave={() => setHoveredImage(null)}
                                 >
                                     {data.title}
                                 </h3>
+                                {/* 모바일 환경에서 바로 이미지를 출력 */}
+                                {isMobile && (
+                                    <img src={imageUrl} alt={data.title} className="mobile-image" />
+                                )}
                             </article>
                         );
                     })}
-                    {hoveredImage && (
+                    {!isMobile && hoveredImage && (
                         <div className="hovered-image">
                             <img src={hoveredImage} alt="Hovered" />
                         </div>

@@ -28,7 +28,7 @@ export default function Header() {
 						})}
 					</ul>
 
-					<ul className='sns'>
+					{/* <ul className='sns'>
 						{snsArr.map((Data, idx) => (
 							<li key={idx}>
 								<a href={
@@ -38,7 +38,24 @@ export default function Header() {
 								<Data />
 							</li>
 						))}
-					</ul>
+					</ul> */}
+				<ul className='sns'>
+  {snsArr.map((Data, idx) => (
+    <li key={idx}>
+      <a 
+        href={
+          idx === 0 ? '/contact' :
+          idx === 1 ? '/posts' :
+          idx === 2 ? '/youtube' : '#'
+        } 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <Data />
+      </a>
+    </li>
+  ))}
+</ul>
 				</nav>
 
 				<span className='btnMobile' onClick={setMenuToggle}>

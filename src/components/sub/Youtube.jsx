@@ -10,7 +10,7 @@ import Content from '../common/Content';
 import { useYoutubeQuery } from '../../hooks/useYoutube';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectCoverflow } from 'swiper/modules';
-
+import Modal from '../common/Modal'; // 모달 컴포넌트 가져오기
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -23,8 +23,9 @@ export default function Youtube() {
 	const { data: Vids, isPending } = useYoutubeQuery({ type: 'B' });
 
 
+	
 	return (
-		<Layout title={'YOUTUBE'}>
+		<Layout title={''}>
 
 
 		<div className="wrap">
@@ -55,6 +56,7 @@ export default function Youtube() {
 			navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
 			className="swiper-wrapper"
 		>
+		
 			<SwiperSlide className="swiper-slide">
 			<a href="https://youtu.be/0XPfwjw0z-Q?si=n7z9YK4bfkZoo7dL" target="_blank" rel="noopener noreferrer">
 				<div className="inner">
@@ -118,26 +120,7 @@ export default function Youtube() {
 		{/* <div className="swiper-pagination"></div> */}
 		
 	</div>
-{/* 
-	<Content delay={1}>
-		{isPending && <p>Loading...</p>}
-		<div className="video-grid">
-			{Vids?.slice(0, 8).map((vid, idx) => (
-			<article key={idx} className="video-card" >
-   <p className="round">
-  <i className="fa-solid fa-circle"></i> </p>
-					<h3>
-						<Link to={'/youtube/' + vid.id}>{shortenText(vid.snippet.title, 53)}</Link>
-					</h3>
-					<div className="txt">
-						<p>{shortenText(vid.snippet.description, 50)}</p>
-						<span>{combineText(vid.snippet.publishedAt.split('T')[0], '-', '.')}</span>
-					</div>
-					<Pic className="thumb" src={vid.snippet.thumbnails.high.url} />
-				</article>
-			))}
-		</div>
-	</Content> */}
+ 
 
 
 <div className="videobox">
@@ -150,7 +133,7 @@ export default function Youtube() {
                     <div className="round">
                         <FaCircle />
                     </div>
-                    <h3>{shortenText(vid.snippet.title, 53)}</h3>
+                    <h3>{shortenText(vid.snippet.title, 40)}</h3>
                     <div className="txt">
                         <p>{shortenText(vid.snippet.description, 50)}</p>
                         <span>{combineText(vid.snippet.publishedAt.split('T')[0], '-', '.')}</span>

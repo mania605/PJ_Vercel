@@ -13,8 +13,7 @@ import PostEdit from './components/sub/PostEdit';
 import { Route, Routes, useLocation } from 'react-router-dom'; 
 import { AnimatePresence } from 'framer-motion';
 import MobileMenu from './components/common/MobileMenu';
-import { useZustandStore } from './hooks/useZustand';
-import ColorSelector from './components/common/ColorSelector';
+import { useZustandStore } from './hooks/useZustand'; 
 import BackgroundVideo from './components/sub/backgroundVideo';
 import YoutubeDetail from './components/sub/YoutubeDetail';
 
@@ -42,8 +41,7 @@ export default function App() {
 					<Route path='/post-edit/:slug' element={<PostEdit />} />
 				</Routes>
 			</AnimatePresence>
-
-<ColorSelector />
+ 
 		
 			<AnimatePresence>{IsMenu && <MobileMenu />}</AnimatePresence>
 
