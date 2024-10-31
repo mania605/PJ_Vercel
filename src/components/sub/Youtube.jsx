@@ -22,14 +22,6 @@ export default function Youtube() {
 	const combineText = useCombineText();
 	const { data: Vids, isPending } = useYoutubeQuery({ type: 'B' });
 
- 
-	const handleThumbnailClick = () => {
-		setShowPopup(true); // 썸네일 클릭 시 팝업 열기
-	};
-
-	const closePopup = () => {
-		setShowPopup(false); // 외부 클릭 시 팝업 닫기
-	};
 
 	return (
 		<Layout title={'YOUTUBE'}>
@@ -38,8 +30,8 @@ export default function Youtube() {
 		<div className="wrap">
 					<h2>YOUTUBE <span>VIDEOS</span> </h2>
 		<ul className="auto">
-			{/* <li className="btnStart"><i className="fas fa-play"></i></li>
-			<li className="btnStop"><i className="fas fa-pause"></i></li> */}
+			<li className="btnStart"><i className="fas fa-play"></i></li>
+			<li className="btnStop"><i className="fas fa-pause"></i></li>
 		</ul>
 
 		<Swiper
@@ -148,7 +140,7 @@ export default function Youtube() {
 	</Content> */}
 
 
-
+<div className="videobox">
 	<Content delay={1}>
     {isPending && <p>Loading...</p>}
     <div className="video-grid">
@@ -174,7 +166,7 @@ export default function Youtube() {
 
 
 
-
+</div>
 
 </Layout>
 );

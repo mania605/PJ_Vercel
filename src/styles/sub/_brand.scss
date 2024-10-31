@@ -3,12 +3,15 @@
 $margin: 150px!important;
 
 main {
-	background-color: #fff;
+
+}
+
+main.main{	
 	width: 100%;
-	padding: 10vh 15vw !important;
+	padding: 10vh 15vw;
 	min-height: 120vh;
 	font-family: 'Noto Serif KR';
-}
+	background-color: #fff;}
 
 .ceoBox {
 	width: 100%;

@@ -16,6 +16,7 @@ import MobileMenu from './components/common/MobileMenu';
 import { useZustandStore } from './hooks/useZustand';
 import ColorSelector from './components/common/ColorSelector';
 import BackgroundVideo from './components/sub/backgroundVideo';
+import YoutubeDetail from './components/sub/YoutubeDetail';
 
 export default function App() {
 	const location = useLocation();
@@ -32,6 +33,7 @@ export default function App() {
  					<Route path='/product' element={<Product />} />
 					<Route path='/manual' element={<Manual />} />
 					<Route path='/youtube' element={<Youtube />} />
+					<Route path='/youtube/:id' element={<YoutubeDetail />} />
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/backgroundVideo' element={<BackgroundVideo />} />
 					<Route path='/post' element={<Post />} />
