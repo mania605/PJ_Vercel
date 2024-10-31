@@ -139,7 +139,7 @@ export default function BrandStory() {
 						<p>
 							All day /<br /> All together /<br /> All in One
 						</p>
-						<p>멋진 남성으로 기억되는 그 시작</p>
+						<p>멋진 남성으로 기억되는 시작점</p>
 					</div>
 				</div>
 				<div className='mid_1-2'>
