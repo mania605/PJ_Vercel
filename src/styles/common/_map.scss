@@ -9,8 +9,8 @@
 	}
 
 	.mapFrame {
-		width: 50%;
-		height: 40vh;
+		width: 100%;
+		height: 35vh;
 		background: rgba(var(--keyRGB), 0.5);
 		position: relative;
 		> article {
@@ -45,9 +45,9 @@
 				padding: 10px 20px;
 				background: #333;
 				border-radius: 3px;
-				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+				box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.05);
 				font: 500 0.6rem/1 'Roboto';
-				color: #fff;
+				background: #777;
 				cursor: pointer;
 				opacity: 0.5;
 				transition: 0.5s;

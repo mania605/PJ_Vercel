@@ -12,9 +12,7 @@
 			height: calc(100% - 100px); /* Account for top and bottom margins */
 			z-index: -1;
 
-			h1{
-				
-			}
+ 
 			video {
 					position: absolute;
 					top: 50%;
@@ -30,8 +28,8 @@
 	.center-text {
     font-family: 'amiri';
     position: absolute;
-    top: 150px; /* Aligns to the top */
-    left: 00px; /* Aligns to the left */
+    top: 21vh; /* Aligns to the top */
+    left: 50px; /* Aligns to the left */
     font-size: 2rem;
     color: #fff;
     padding: 20px; /* Optional: adds spacing from the top and left edges */

@@ -12,13 +12,13 @@
 	}
 	.formBox {
 		width: 48%;
-		border-left: 3px solid #bbb;
+		border-left: 3px solid #d9d9d9;
 		border-radius: 3px;
 		padding-left: 8vw;
 
 		label {
 			display: block;
-			font: 500 1rem/1 'Roboto';
+			font: 500 1.2rem/1 'Roboto';
 			color: #333;
 			margin-bottom: 20px;
 		}
@@ -28,15 +28,15 @@
 		textarea {
 			border: none;
 			width: 100%;
-			border-bottom: 1px solid #888;
+			border-bottom: 1px solid #bbb;
 			padding: 10px 5px;
 			background: transparent;
 			resize: none;
 
 			//placeholer 요소 안쪽의 텍스트 스타일링
 			&::placeholder {
-				color: rgba(var(--keyRGB), 0.6);
-				font: 400 0.8rem/1.2 'amiri';
+				color: #807e7e;
+				font: 400 0.8rem/1.2 'tauri';
 			}
 		}
 
@@ -67,7 +67,7 @@
 
 			input {
 				display: inline-block;
-				background: rgba(var(--keyRGB), 0.8);
+				background: #777;
 				border-radius: 3px;
 				padding: 10px 20px;
 				font: 600 0.8rem/1 'Roboto';

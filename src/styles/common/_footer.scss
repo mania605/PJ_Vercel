@@ -19,9 +19,10 @@
 		background: rgba(255, 255, 255, 0.1); /* Slightly visible transparent line */
 	}
 	h1 {
+		font: 900 2rem/1 'onest'#FFF !important;
 		display: flex;
 		align-items: center;
-		font: 600 1.6rem/1 'amiri' #FFF;
+ 
 
 	}
 
@@ -39,6 +40,7 @@
 			font-size: 0.8rem;
 		}
 		p {
+			font: 100 1rem/1 'amiri';;
 			display: flex;
 			justify-content: center;
 		}

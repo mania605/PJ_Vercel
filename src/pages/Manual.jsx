@@ -26,7 +26,7 @@ export default function Music() {
 			//각 article 요소를 45도씩 회전하고 아래로 배치
 			el.style.transform = `rotate(${deg * i}deg) translateY(-100vh)`;
 			// pic.style.backgroundImage = `url(music_img/member${i + 1}.jpg)`;
-			pic.style.backgroundImage = `url(music_img/${i + 1}.png)`;
+			pic.style.backgroundImage = `url(music_img/${i + 1}.jpg)`;
 			i++;
 		}
 
@@ -69,7 +69,7 @@ export default function Music() {
 							<div className='pic'></div>
 							<div className='txt'>
 								<h2>Lotion</h2>
-								<p>Natural hydration boost for radiant skin</p>
+								<p>For the past 10 years, the men’s beauty cosmetics industry has been considered a blue ocean—a market with a potential for great growth as well as challenges.</p>
 							</div>
 						</div>
 					</article>
@@ -79,7 +79,7 @@ export default function Music() {
 							<div className='pic'></div>
 							<div className='txt'>
 								<h2>Serum</h2>
-								<p>Deep skin revitalization with botanical extracts</p>
+								<p>Concerns such as blackheads, wrinkles, and acne-prone skin are driving this shift. Male consumers are increasingly adopting a wider range of skin care products, moving beyond basics like shaving and hair care. </p>
 							</div>
 						</div>
 					</article>
@@ -89,7 +89,7 @@ export default function Music() {
 							<div className='pic'></div>
 							<div className='txt'>
 								<h2>Essence</h2>
-								<p>Replenishes and smooths for supple radiance</p>
+								<p>Men's Skincare Products Market size is set to grow by USD 6.39 billion from 2024-2028, Innovation and portfolio extension leading to product premiumization to boost the market growth, </p>
 							</div>
 						</div>
 					</article>
@@ -99,7 +99,7 @@ export default function Music() {
 							<div className='pic'></div>
 							<div className='txt'>
 								<h2>Moisturizer</h2>
-								<p>Intense daily hydration for lasting comfort</p>
+								<p>Men also need facial care – but this care should address their skin condition, not their gender. We at Dr. Hauschka look at the person as a whole, regardless of gender identity. </p>
 							</div>
 						</div>
 					</article>
@@ -109,7 +109,7 @@ export default function Music() {
 							<div className='pic'></div>
 							<div className='txt'>
 								<h2>Cleanser</h2>
-								<p>Pore-clearing freshness, smooth and pure</p>
+								<p>Establishing a skin care routine for men can be a daunting project for beginners. Navigating between facial cleansers, serums and eye creams is a confusing task, especially since the choices often seem infinite.</p>
 							</div>
 						</div>
 					</article>
@@ -118,8 +118,10 @@ export default function Music() {
 						<div className='inner'>
 							<div className='pic'></div>
 							<div className='txt'>
-								<h2>Lipstick</h2>
-								<p>Vibrant natural color with hydrating feel</p>
+
+							<h2>Body Lotion</h2>
+								<p>Establishing a skin care routine for men can be a daunting project for beginners. Navigating between facial cleansers, serums and eye creams is a confusing task, especially since the choices often seem infinite. First, Determine Your Skin Type.</p>
+	
 							</div>
 						</div>
 					</article>
@@ -128,8 +130,8 @@ export default function Music() {
 						<div className='inner'>
 							<div className='pic'></div>
 							<div className='txt'>
-								<h2>Foundation</h2>
-								<p>Even skin perfection for a flawless look</p>
+							<h2>Soothing Lotion</h2>
+							<p>Concerns such as blackheads, wrinkles, and acne-prone skin are driving this shift. </p>
 							</div>
 						</div>
 					</article>
@@ -138,8 +140,8 @@ export default function Music() {
 						<div className='inner'>
 							<div className='pic'></div>
 							<div className='txt'>
-								<h2>Makeup Primer</h2>
-								<p>Smooth skin base for long-lasting makeup</p>
+								<h2>Essence</h2>
+								<p>Men also need facial care – but this care should address their skin condition, not their gender. We at Dr. Hauschka look at the person as a whole, regardless of gender identity.</p>
 							</div>
 						</div>
 					</article>
