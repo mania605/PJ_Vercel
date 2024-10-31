@@ -82,12 +82,14 @@ form input[type="submit"] {
   background-color: #313234;
   opacity: 0.8;
   color: white;
+  max-width: 600px;
 }
 
 form input[type="submit"]:hover {
   background-color: #007bff;
   opacity: 0.8;
   color: white;
+  max-width: 600px;
 }
 
 /* 리셋 버튼 스타일 */
@@ -95,9 +97,11 @@ form input[type="reset"] {
   background-color: #dc3545;
   opacity: 0.8;
   color: white;
+  max-width: 600px;
 }
 
 form input[type="reset"]:hover {
   background-color: #c82333;
   opacity: 0.8;
+  max-width: 600px;
 }
