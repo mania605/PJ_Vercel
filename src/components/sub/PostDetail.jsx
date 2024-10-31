@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import Layout from '../common/Layout';
+import Layout from '../components/Layout';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -31,7 +31,6 @@ export default function PostDetail() {
 	return (
 		<Layout title='Post Detail'>
 			<section>
-				<div className='category'>category: {Detail?.category}</div>
 				<h3>{Detail?.title}</h3>
 				<p>{Detail?.body}</p>
 				<span>Created : {Detail?.created.split('T')[0]}</span>

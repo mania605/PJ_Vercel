@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import Layout from '../common/Layout';
+import Layout from '../components/Layout';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
@@ -8,28 +8,32 @@ export default function PostEdit() {
 	const [Data, setData] = useState(null);
 	const navigate = useNavigate();
 
+	// 수정폼요소가 담길 참조 객체
 	const ref_title = useRef(null);
 	const ref_body = useRef(null);
-	const ref_category = useRef(null);
 
+	// 수정 버튼 클릭시 호출될 수정 함수
 	const handleSubmit = e => {
 		e.preventDefault();
 
+		//수정 폼 안쪽에 있는 데이터를 가져와 객체로 담아둠
 		const editData = {
 			title: ref_title.current.value,
-			body: ref_body.current.value,
-			category: ref_category.current.value
+			body: ref_body.current.value
 		};
 
+		//axiosdptj put 요청으로 수정할 객체값과 같이 전달
 		axios
 			.put(`http://localhost:8000/posts/${slug}/`, editData)
 			.then(res => {
 				console.log(res);
+				// 수정이 완료되면 강제로 포스트 목록 페이지 컴포넌트로 이동
 				navigate('/post');
 			})
 			.catch(err => console.log(err));
 	};
 
+	//컴포넌트 마운트시 슬러그값을 이용해 get 방식으로 수정할 데이터 가져옴
 	useEffect(() => {
 		axios
 			.get(`http://localhost:8000/posts/${slug}`)
@@ -41,26 +45,17 @@ export default function PostEdit() {
 			});
 	}, []);
 
-	// 현재 넘어온 상세페이지 전용 모델의 정보에 따라 select의 option활성화
-	useEffect(() => {
-		ref_category.current.value = Data?.category;
-	}, [Data]);
-
 	return (
+		// 처음 마운트시 수정할 데이터를 폼요소 안쪽에 넣어줌
+		// 이때 value속성이 아닌 defaultValue속성을 지정한 이유
+		// valaue속성을 연결시에는 무조건 onChange이벤트가 같이 전달되야 하기 때문
 		<Layout title='Edit Post'>
 			<form onSubmit={handleSubmit}>
-				<select name='category' id='category' ref={ref_category}>
-					<option value='PERSONAL'>Personal</option>
-					<option value='BUSINESS'>Busniness</option>
-					<option value='IMPORTANT'>Important</option>
-				</select>
-				<br />
 				<input ref={ref_title} type='text' defaultValue={Data?.title} />
 				<br />
 				<textarea ref={ref_body} defaultValue={Data?.body}></textarea>
 				<br />
-				{/* 수정취소 버튼 클릭시 폼요소를 비우는게 아닌 이전 화면으로 되돌아감 */}
-				<input type='reset' value='수정취소' onClick={() => navigate(-1)} />
+				<input type='reset' value='수정취소' />
 				<input type='submit' value='수정' />
 			</form>
 		</Layout>
