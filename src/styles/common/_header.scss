@@ -1,0 +1,73 @@
+//npm i react-icons
+.header {
+	width: 100%;
+	padding: 30px 15vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #1a1919;
+
+	h1 {
+		font: 900 2rem/1 'amiri';
+
+		letter-spacing: 1px;
+
+		a{
+			color: #888;
+		}
+	}
+
+
+
+
+	nav {
+		display: flex;
+		align-items: center;
+		gap: 70px;
+
+		.gnb {
+			display: flex;
+			gap: 50px;
+			font: 500 0.8rem/1 'Roboto';
+			color: #888;
+
+			li.on {
+				color: rgba(var(--keyRGB), 2);
+			}
+		}
+
+		.sns {
+			display: flex;
+			font-size: 1rem;
+			color: #888;
+			gap: 10px;
+		}
+	}
+
+	.btnMobile {
+		cursor: pointer;
+		font-size: 1rem;
+		display: none;
+	}
+}
+
+//기존 헤더 스타일을 그대로 유지하면서 main클래스만 추가되면 메인 전용 헤더스타일 추가
+.header.main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 6;
+	border-bottom: none;
+	padding: 30px 15vw; //메인 헤더 추가
+}
+
+@media screen and (max-width: $tablet) {
+	.header {
+		nav {
+			display: none;
+		}
+		.btnMobile {
+			display: block;
+		}
+	}
+}
