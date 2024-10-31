@@ -1,3 +1,4 @@
+
 .product-page {
 	position: relative;
 	z-index: 1;
@@ -5,12 +6,15 @@
 
 	.background-video {
 			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
+			top: 140px; /* Adjusted to leave space for the black margin */
+			left: 50px;
+			width: calc(100% - 100px); /* Account for left and right margins */
+			height: calc(100% - 100px); /* Account for top and bottom margins */
 			z-index: -1;
 
+			h1{
+				
+			}
 			video {
 					position: absolute;
 					top: 50%;
@@ -24,15 +28,15 @@
 	}
 
 	.center-text {
-			font-family: 'amiri';
-			position: relative;
-			top: 10%;
-			left: 50%;
-			transform: translateX(-50%);
-			font-size: 2rem;
-			color: #fff;
-			z-index: 1;
-	}
+    font-family: 'amiri';
+    position: absolute;
+    top: 150px; /* Aligns to the top */
+    left: 00px; /* Aligns to the left */
+    font-size: 2rem;
+    color: #fff;
+    padding: 20px; /* Optional: adds spacing from the top and left edges */
+    z-index: 1;
+}
 
 	.productList {
 			display: flex;
@@ -48,21 +52,45 @@
 			}
 	}
 
+	// .product-item {
+	// 		position: absolute;
+	// 		transition: transform 0.3s ease;
+
+	// 		.name {
+	// 				margin-top: 400%;
+	// 				font-size: 1.2rem;
+	// 				color: #fff;
+	// 				text-align: center;
+	// 				padding: 5px;
+	// 				border-radius: 5px;
+	// 				z-index: 2;
+	// 		}
+	// }
+
 	.product-item {
-			position: absolute;
-			transition: transform 0.3s ease;
+    position: absolute;
+    transition: transform 0.3s ease;
 
-			.name {
-					margin-top: 400%;
-					font-size: 1.2rem;
-					color: #fff;
-					text-align: center;
-					padding: 5px;
-					border-radius: 5px;
-					z-index: 2;
-			}
-	}
+ 
+/* Further upward shift and wider spread */
+&:nth-child(1) { transform: rotate(0deg) translate(150vw, -130vh) rotate(-0deg); }
+&:nth-child(2) { transform: rotate(45deg) translate(150vw, -130vh) rotate(-45deg); }
+&:nth-child(3) { transform: rotate(90deg) translate(150vw, -130vh) rotate(-90deg); }
+&:nth-child(4) { transform: rotate(135deg) translate(150vw, -130vh) rotate(-135deg); }
+&:nth-child(5) { transform: rotate(180deg) translate(150vw, -130vh) rotate(-180deg); }
+&:nth-child(6) { transform: rotate(225deg) translate(150vw, -130vh) rotate(-225deg); }
+&:nth-child(7) { transform: rotate(270deg) translate(150vw, -130vh) rotate(-270deg); }
+&:nth-child(8) { transform: rotate(315deg) translate(150vw, -130vh) rotate(-315deg); }
 
+    .name {
+        font-size: 1.2rem;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        z-index: 2;
+    }
+}
 	.hovered-image {
 			position: fixed;
 			top: 50%;
@@ -152,3 +180,6 @@
 			}
 	}
 }
+
+
+

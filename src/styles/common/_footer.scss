@@ -2,22 +2,34 @@
 	width: 100%;
 	padding: 100px 15vw;
 	background: #000000;
-	color: rgba(var(--keyRGB), 2);
+	color: #888;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
 
+	/* Add a transparent baseline */
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: rgba(255, 255, 255, 0.1); /* Slightly visible transparent line */
+	}
 	h1 {
 		display: flex;
 		align-items: center;
 		font: 600 1.6rem/1 'amiri' #FFF;
+
 	}
 
 	section {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 80px;
+		position: relative; /* Allows for absolute positioning of the baseline */
 
 		ul {
 			display: flex;
