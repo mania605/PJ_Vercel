@@ -3,7 +3,7 @@ import Layout from '../common/Layout';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-export default function PostAdd() {
+export default function PostsAdd() {
 	const navigate = useNavigate();
 	const ref_title = useRef(null);
 	const ref_body = useRef(null);

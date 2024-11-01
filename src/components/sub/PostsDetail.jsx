@@ -3,7 +3,7 @@ import Layout from '../common/Layout';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function PostDetail() {
+export default function PostsDetail() {
 	const navigate = useNavigate();
 	const { slug } = useParams();
 	const [Detail, setDetail] = useState(null);
@@ -16,7 +16,7 @@ export default function PostDetail() {
 			.then(res => {
 				console.log(res);
 				//글 삭제 완료시 포스트목록 컴포넌트로 강제 이동
-				navigate('/post');
+				navigate('/posts');
 			})
 			.catch(err => console.log(err));
 	};
@@ -29,7 +29,7 @@ export default function PostDetail() {
 	}, []);
 
 	return (
-		<Layout title='Post Detail'>
+		<Layout title='Posts Detail'>
 			<section>
 				<h3>{Detail?.title}</h3>
 				<p>{Detail?.body}</p>
@@ -37,7 +37,7 @@ export default function PostDetail() {
 			</section>
 
 			<button>
-				<Link to={`/post-edit/${slug}`}>Edit</Link>
+				<Link to={`/postEdit/${slug}`}>Edit</Link>
 			</button>
 			<button onClick={handleDelete}>Delete</button>
 		</Layout>

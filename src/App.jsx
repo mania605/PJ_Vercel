@@ -14,7 +14,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import MobileMenu from './components/common/MobileMenu';
 import { useZustandStore } from './hooks/useZustand'; 
-import BackgroundVideo from './components/sub/BackgroundVideo';
+import BackgroundVideo from './components/sub/backgroundVideo';
 import YoutubeDetail from './components/sub/YoutubeDetail';
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
 				<Routes location={location} key={location.pathname}>
 					<Route path='/' element={<Home />} />
 					<Route path='/brand' element={<Brand />} />
- 					<Route path='/product' element={<Product />} />
+					<Route path='/product' element={<Product />} />
 					<Route path='/manual' element={<Manual />} />
 					<Route path='/youtube' element={<Youtube />} />
 					<Route path='/youtube/:id' element={<YoutubeDetail />} />
@@ -37,8 +37,8 @@ export default function App() {
 					<Route path='/backgroundVideo' element={<BackgroundVideo />} />
 					<Route path='/posts' element={<Posts />} />
 					<Route path='/posts/:slug' element={<PostsDetail />} />
-					<Route path='/posts-add' element={<PostsAdd />} />
-					<Route path='/posts-edit/:slug' element={<PostsEdit />} />
+					<Route path='/postsAdd' element={<PostsAdd />} />
+					<Route path='/postsEdit/:slug' element={<PostsEdit />} />
 				</Routes>
 			</AnimatePresence>
  

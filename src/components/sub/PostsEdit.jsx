@@ -3,7 +3,7 @@ import Layout from '../common/Layout';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
-export default function PostEdit() {
+export default function PostsEdit() {
 	const { slug } = useParams();
 	const [Data, setData] = useState(null);
 	const navigate = useNavigate();
@@ -49,7 +49,7 @@ export default function PostEdit() {
 		// 처음 마운트시 수정할 데이터를 폼요소 안쪽에 넣어줌
 		// 이때 value속성이 아닌 defaultValue속성을 지정한 이유
 		// valaue속성을 연결시에는 무조건 onChange이벤트가 같이 전달되야 하기 때문
-		<Layout title='Edit Post'>
+		<Layout title='Edit Posts'>
 			<form onSubmit={handleSubmit}>
 				<input ref={ref_title} type='text' defaultValue={Data?.title} />
 				<br />

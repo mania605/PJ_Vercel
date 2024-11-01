@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import useThrottle from '../../hooks/useThrottle';
 import { useZustandStore } from '../../hooks/useZustand';
 import { Link } from 'react-router-dom';
+import { FaUserGroup } from 'react-icons/fa6';
+import { FaImages, FaYoutube, FaEnvelope } from 'react-icons/fa';
+import { IoDocumentText } from 'react-icons/io5';
 
 export default function MobileMenu() {
 	const setMenuClose = useZustandStore(state => state.setMenuClose);
@@ -34,31 +37,31 @@ export default function MobileMenu() {
 			<ul>
 				<li>
 					<Link to='/brand'>
+						<FaUserGroup />
 						Brand
 					</Link>
 				</li>
 				<li>
 					<Link to='/product'>
+						<FaImages />
 						Product
 					</Link>
 				</li>
 				<li>
-					<Link to='/manual'>
-						Manual
-					</Link>
-				</li>
-				<li>
 					<Link to='/youtube'>
+						<FaYoutube />
 						Youtube
 					</Link>
 				</li>
 				<li>
 					<Link to='/contact'>
+						<FaEnvelope />
 						Contact
 					</Link>
 				</li>
 				<li>
 					<Link to='/posts'>
+						<IoDocumentText />
 						Posts
 					</Link>
 				</li>

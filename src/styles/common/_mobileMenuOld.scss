@@ -1,7 +1,7 @@
 .mobileMenu {
-	width: 263px;
+	width: 280px;
 	height: 100vh;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.7);
 	backdrop-filter: blur(20px);
 	position: fixed;
 	left: 0px;
@@ -13,8 +13,8 @@
 	align-content: space-between;
 
 	h1 {
-		width: 95%;
-		margin:  10px auto;
+		width: 100%;
+		padding: 50px;
 		height: 40%;
 		display: flex;
 		flex-wrap: wrap;
@@ -22,8 +22,6 @@
 		justify-content: center;
 		font: 900 2rem/1 'Amiri';
 		letter-spacing: 1px;
-		color: #111;
-		border: 12px double rgba(0, 0, 0, 0.162); /* 이중선, 두께는 4px */
 	}
 
 	ul {
@@ -38,7 +36,7 @@
 			align-items: center;
 			padding: 0px 50px;
 			font: 600 1rem/1 'onest';
-			color: #333;
+			color: #888;
 			letter-spacing: 0.6;
 			border-top: 1px solid #fff;
 			text-shadow: 2px 2px 2px #fff;

@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 export default function SplitText({ children = '', style, interval = 0.1, delay = 0, duration = 0.3 }) {
 	//내부적으로 빈배열 생성해서 children으로 전달받은 문자열을 반복돌면서 배열에 담아줌
 	const textArr = [];
-	for (const letter of children) textArr.push(letter);
+	for (const letter of children) textArr.push(letter === ' ' ? '\u00A0' : letter); // 공백을 &nbsp;로 변환
 
 	//부모요소를 통해서 동적으로 반복생성될 자식요소인 span에 적용할 서식 관련 스타일
 	//서식 외의 스타일구문은 자식요소로 자동 상속이 안됨 (marginBottom은 span에 상속이 안 먹고 부모요소인 h2에만 적용됨)
