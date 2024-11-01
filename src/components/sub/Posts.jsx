@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Post() {
+export default function posts() {
 	const [Posts, setPosts] = useState([]);
 	const [SearchText, setSearchText] = useState('');
 	//카테고리명이 담길 state
