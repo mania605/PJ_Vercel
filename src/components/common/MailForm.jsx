@@ -29,7 +29,8 @@ export default function MailForm() {
 
 	return (
 		<article className='mailForm'>
-						<div className='info'>
+
+<div className='info'>
 				<h2>Information</h2>
 				<p>
 				Business Inquiry 
@@ -38,10 +39,9 @@ export default function MailForm() {
 				<p>We welcome a variety of business opportunities. Please leave a message, and our team will get back to you as soon as possible.</p>
 			</div>
 
-			
 			<div className='formBox'>
 				{/* form에 전송 이벤트 연결 */}
-				<form onSubmit={sendForm} ref={ref_form}>
+				<form2 onSubmit={sendForm} ref={ref_form}>
 					{/* 문의자이름, 메일주소 입력받는 상단 영역 */}
 					<div className='upper'>
 						<span>
@@ -65,10 +65,52 @@ export default function MailForm() {
 						<input type='reset' value='Cancel' />
 						<input type='submit' value='Send' />
 					</nav>
-				</form>
+				</form2>
 			</div>
 
 
 		</article>
 	);
 }
+
+
+
+
+// 	return (
+// 		<article className='mailForm'>
+	
+
+			
+// 			<div className='formBox'>
+// 				{/* form에 전송 이벤트 연결 */}
+// 				<form onSubmit={sendForm} ref={ref_form}>
+// 					{/* 문의자이름, 메일주소 입력받는 상단 영역 */}
+// 					<div className='upper'>
+// 						<span>
+// 							<label htmlFor='uName'>Name</label>
+// 							<input ref={ref_name} name='user_name' type='text' id='uName' placeholder='Leave your name' />
+// 						</span>
+// 						<span>
+// 							<label htmlFor='uMail'>E-Mail</label>
+// 							<input ref={ref_email} name='user_email' type='text' id='uMail' placeholder='Leave your email' />
+// 						</span>
+// 					</div>
+
+// 					{/* 문의내용 입력받는 textarea 하단 영역 */}
+// 					<div className='lower'>
+// 						<label htmlFor='msg'>Message</label>
+// 						<textarea ref={ref_msg} name='message' id='msg' placeholder='Leave your message'></textarea>
+// 					</div>
+
+// 					{/* 전송,취소 버튼 그룹 */}
+// 					<nav className='btnSet'>
+// 						<input type='reset' value='Cancel' />
+// 						<input type='submit' value='Send' />
+// 					</nav>
+// 				</form>
+// 			</div>
+
+
+// 		</article>
+// 	);
+// }
