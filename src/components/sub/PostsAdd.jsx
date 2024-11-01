@@ -43,8 +43,9 @@ export default function PostsAdd() {
 				</select>
 				<br />
 
-				<input type='reset' value='취소' />
+
 				<input type='submit' value='전송' />
+				<input type='reset' value='취소' />
 			</form>
 		</Layout>
 	);
