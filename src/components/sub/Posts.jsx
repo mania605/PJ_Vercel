@@ -21,7 +21,7 @@ export default function Posts() {
 			{Posts.map(post => {
 				return (
 					<h3 key={post.id}>
-						<Link to={`/post/${post.slug}`}>{post.title}</Link>
+						<Link to={`/posts/${post.slug}`}>{post.title}</Link>
 					</h3>
 				);
 			})}

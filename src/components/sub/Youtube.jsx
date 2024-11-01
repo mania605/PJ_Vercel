@@ -10,7 +10,7 @@ import Content from '../common/Content';
 import { useYoutubeQuery } from '../../hooks/useYoutube';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectCoverflow } from 'swiper/modules';
-import Modal from '../common/Modal'; // 모달 컴포넌트 가져오기
+// import Modal from '../common/Modal'; // 모달 컴포넌트 가져오기
 
 import 'swiper/css';
 import 'swiper/css/pagination';
