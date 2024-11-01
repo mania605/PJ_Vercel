@@ -140,7 +140,7 @@ export default function Music() {
 						<div className='inner'>
 							<div className='pic'></div>
 							<div className='txt'>
-								<h2>Essence</h2>
+								<h2>Essence Serum</h2>
 								<p>Men also need facial care – but this care should address their skin condition, not their gender. We at Dr. Hauschka look at the person as a whole, regardless of gender identity.</p>
 							</div>
 						</div>

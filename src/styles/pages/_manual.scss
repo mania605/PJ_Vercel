@@ -55,11 +55,13 @@ figure > p {
 	position: absolute;
 	bottom: 7vh;
 	left: 50%;
+	max-width: 400px;
 	transform: translateX(-50%);
 	font: 12px/1 'arial';
 	color: #fff;
 	letter-spacing: 2px;
 	opacity: 0.8;
+ 
 }
 
 /* 4단계 */
@@ -151,6 +153,7 @@ figure section article .inner .pic .dot {
 figure section article .inner .txt {
 	text-align: center;
 	position: relative;
+	max-width: 480px;
 	z-index: 3;
 }
 figure section article .inner .txt h2 {

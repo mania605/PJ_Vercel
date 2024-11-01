@@ -6,15 +6,15 @@ import Manual from './pages/Manual';
 import Brand from './components/sub/Brand';
 import Youtube from './components/sub/Youtube';
 import Contact from './components/sub/Contact';
-import Post from './components/sub/Post';
-import PostDetail from './components/sub/PostDetail';
-import PostAdd from './components/sub/PostAdd';
-import PostEdit from './components/sub/PostEdit';
+import Posts from './components/sub/Posts';
+import PostsDetail from './components/sub/PostsDetail';
+import PostsAdd from './components/sub/PostsAdd';
+import PostsEdit from './components/sub/PostsEdit';
 import { Route, Routes, useLocation } from 'react-router-dom'; 
 import { AnimatePresence } from 'framer-motion';
 import MobileMenu from './components/common/MobileMenu';
 import { useZustandStore } from './hooks/useZustand'; 
-import BackgroundVideo from './components/sub/backgroundVideo';
+import BackgroundVideo from './components/sub/BackgroundVideo';
 import YoutubeDetail from './components/sub/YoutubeDetail';
 
 export default function App() {
@@ -35,10 +35,10 @@ export default function App() {
 					<Route path='/youtube/:id' element={<YoutubeDetail />} />
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/backgroundVideo' element={<BackgroundVideo />} />
-					<Route path='/post' element={<Post />} />
-					<Route path='/post/:slug' element={<PostDetail />} />
-					<Route path='/post-add' element={<PostAdd />} />
-					<Route path='/post-edit/:slug' element={<PostEdit />} />
+					<Route path='/posts' element={<Posts />} />
+					<Route path='/posts/:slug' element={<PostsDetail />} />
+					<Route path='/posts-add' element={<PostsAdd />} />
+					<Route path='/posts-edit/:slug' element={<PostsEdit />} />
 				</Routes>
 			</AnimatePresence>
  

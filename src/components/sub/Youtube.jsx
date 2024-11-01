@@ -28,7 +28,7 @@ export default function Youtube() {
 		<Layout title={''}>
 
 
-		<div className="wrap">
+		<div className="wrap2">
 					<h2>YOUTUBE <span>VIDEOS</span> </h2>
 		<ul className="auto">
 			<li className="btnStart"><i className="fas fa-play"></i></li>
