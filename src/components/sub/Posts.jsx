@@ -16,7 +16,7 @@ export default function Posts() {
 	return (
 		<Layout title='Posts'>
 			<button>
-				<Link to='/postAdd'>Write Post</Link>
+				<Link to='/postsAdd'>Write Post</Link>
 			</button>
 			{Posts.map(post => {
 				return (
