@@ -1,6 +1,5 @@
-
-import { FaCircle } from 'react-icons/fa'; // fa-circle 아이콘을 FaCircle로 가져옵니다.
-// import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { FaCircle } from 'react-icons/fa'; // fa-circle 아이콘 
 import Layout from '../common/Layout';
 import Pic from '../common/Pic';
 import useShortenText from '../../hooks/useShortenText';
@@ -24,6 +23,31 @@ export default function Youtube() {
 
 
 	
+	// 버튼과 스와이퍼 인스턴스 참조 생성
+	const btnStartRef = useRef(null);
+	const btnStopRef = useRef(null);
+	const swiperRef = useRef(null);
+
+	useEffect(() => {
+		// 컴포넌트가 렌더링된 후 이벤트 리스너를 설정
+		const btnStart = btnStartRef.current;
+		const btnStop = btnStopRef.current;
+
+		const startAutoplay = () => swiperRef.current.autoplay.start();
+		const stopAutoplay = () => swiperRef.current.autoplay.stop();
+
+		if (btnStart) btnStart.addEventListener("click", startAutoplay);
+		if (btnStop) btnStop.addEventListener("click", stopAutoplay);
+
+		// 컴포넌트 언마운트 시 이벤트 리스너를 정리
+		return () => {
+			if (btnStart) btnStart.removeEventListener("click", startAutoplay);
+			if (btnStop) btnStop.removeEventListener("click", stopAutoplay);
+		};
+	}, []);
+
+
+	
 	return (
 		<Layout title={''}>
 
@@ -31,11 +55,12 @@ export default function Youtube() {
 		<div className="wrap2">
 					<h2>YOUTUBE <span>VIDEOS</span> </h2>
 		<ul className="auto">
-			<li className="btnStart"><i className="fas fa-play"></i></li>
-			<li className="btnStop"><i className="fas fa-pause"></i></li>
+			<li ref={btnStartRef} className="btnStart"><i className="fas fa-play"></i></li>
+			<li ref={btnStopRef} className="btnStop"><i className="fas fa-pause"></i></li>
 		</ul>
 
 		<Swiper
+		onSwiper={(swiper)=>{swiperRef.current =swiper;}}
 			modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
 			loop={true}
 			spaceBetween={0}
@@ -117,8 +142,7 @@ export default function Youtube() {
 		{/* 네비게이션 및 페이지네이션 요소 */}
 		<div className="swiper-button-next"></div>
 		<div className="swiper-button-prev"></div>
-		{/* <div className="swiper-pagination"></div> */}
-		
+		<div className="swiper-pagination"></div>
 	</div>
  
 
