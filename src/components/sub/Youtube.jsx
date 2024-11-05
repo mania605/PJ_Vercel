@@ -170,7 +170,7 @@ export default function Youtube() {
                     </div>
                     <h3>{shortenText(vid.snippet.title, 40)}</h3>
                     <div className="txt">
-                        <p>{shortenText(vid.snippet.description, 50)}</p>
+                        <p>{shortenText(vid.snippet.description, 90)}</p>
                         <span>{combineText(vid.snippet.publishedAt.split('T')[0], '-', '.')}</span>
                     </div>
                     <Pic className="thumb" src={vid.snippet.thumbnails.high.url} />
