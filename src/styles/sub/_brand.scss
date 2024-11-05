@@ -255,3 +255,115 @@
 		}
 	}
 }
+
+
+// 반응형 스타일 추가
+@media screen and (max-width: $tablet) { 
+  .ceoBox {
+    flex-direction: column;
+
+    .ceoImg {
+      width: 100%;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .story {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .mid_1 {
+    flex-direction: column;
+    text-align: center;
+
+    .mid_1-1,
+    .mid_1-2 {
+      width: 100%;
+    }
+  }
+
+  .mid_2 {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  main.main {
+    padding: 5px;
+  }
+
+  .ceoBox {
+    flex-direction: column;
+
+    .ceoImg {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .story {
+      width: 100%;
+      text-align: center;
+    }
+
+    // 텍스트 크기 조정
+    h2 {
+      font-size: 1.2rem; // 글자 크기를 줄임
+      letter-spacing: 0.8px;			
+      text-align: center;
+    }
+
+    .ceoSubTitle {
+      font-size: 0.7rem; // 작은 화면에 맞게 글자 크기 축소
+      line-height: 1.2;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .mid_1 {
+    .mid_1-1,
+    .mid_1-2 {
+      font-size: 1rem;
+      padding: 10px; // 여백 축소
+      text-align: center;
+    }
+  }
+
+  .mid_2 article {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem; // 글자 크기 조정
+  }
+
+  .last {
+    flex-direction: column;
+    align-items: center;
+
+    .combineImg {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .lastText {
+      width: 100%;
+      text-align: center;
+
+
+
+			
+      p {
+        font-size: 1rem; // 텍스트 크기 조정
+      }
+
+      p:nth-child(1) {
+        font-size: 0.8rem;
+      }
+
+      p:nth-child(2) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
