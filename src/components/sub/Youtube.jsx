@@ -80,6 +80,16 @@ export default function Youtube() {
 			pagination={{ el: ".swiper-pagination", type: "fraction" }}
 			navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
 			className="swiper-wrapper"
+			breakpoints={{
+				// 반응형 설정
+				999: {  // 태블릿 이상 크기에서 여러 슬라이드 보이기
+					slidesPerView: "auto",
+				},
+				599: {  // 모바일에서 하나의 슬라이드만 중앙에 보이기
+					slidesPerView: 1,
+					centeredSlides: true,
+				},
+			}}
 		>
 		
 			<SwiperSlide className="swiper-slide">
@@ -153,7 +163,8 @@ export default function Youtube() {
     <div className="video-grid">
         {Vids?.slice(0, 8).map((vid, idx) => (
             <Link to={`/youtube/${vid.id}`} key={idx} className="video-card">
-                <article>
+					 
+                <article className="content-wrapper">
                     <div className="round">
                         <FaCircle />
                     </div>

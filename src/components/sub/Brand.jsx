@@ -86,7 +86,7 @@ export default function BrandStory() {
 	}, []);
 
 	return (
-		<main title='BrandStory' ref={ref_el} className='main'>
+		<main title='BrandStory' ref={ref_el} className='main2'>
 
 			<article className='ceoBox'>
 				<div className='story'>

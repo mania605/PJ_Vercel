@@ -3,7 +3,7 @@
 
 main {
 	width: 100%;
-	padding: 0; 
+	padding: 0 !important; 
 }
  
 	.content {
@@ -16,7 +16,7 @@ main {
 	position: relative;
 	box-sizing: border-box;
 	margin-bottom: 20vh;
-	background-image: linear-gradient(45deg, #000, #100f0f);
+	// background-image: linear-gradient(45deg, #000, #100f0f);
  
 
 	h2 {
@@ -26,8 +26,8 @@ main {
 		color: #fff;
 		letter-spacing: 1px;
 		position: absolute;
-		left: 50px;
-		top: 60px;
+		left: 40px;
+		top: 40px;
 
 		span {
 			opacity: 0.8;
@@ -36,11 +36,12 @@ main {
 
 	.auto {
 		position: absolute;
-top: 60px;
-		left: 300px;
+		top: 40px;
+		left: 280px;
 		z-index: 20;
 
 		li {
+			opacity: 0.8;
 			float: left;
 			margin-right: 20px;
 			cursor: pointer;
@@ -104,8 +105,8 @@ top: 60px;
 						font-size: 40px;
 						font-family: 'roboto';
 						color: #111;
-						margin-top: 15px;
-						margin-bottom: 20px;
+						margin-top: 10px;
+						margin-bottom: 10px;
 
 						&::after {
 							content: '';
@@ -120,9 +121,9 @@ top: 60px;
 
 					p {
 						font-weight: normal;
-						font-size: 13px;
+						font-size: 12px;
 						font-family: 'arial';
-						line-height: 1.3;
+						line-height: 1;
 						color: #aaa;
 						letter-spacing: 1px;
 					}
@@ -206,31 +207,37 @@ top: 60px;
 	width: 100%;
 	background-color: #000000;
 	opacity: 1 ;
+ 
 }
 
 .video-grid {
 	display: grid;
-
+  grid-template-columns: repeat(4, 1fr);
 	grid-template-columns: repeat(auto-fit, minmax(4, 1fr)); /* 반응형에서 유연하게 줄어듦 */
 	aspect-ratio: 16/9;
-	gap: 30px;
+  gap: 20px;
 	margin-top: 20px;
 
 }
-
+ 
 
 .video-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* 텍스트와 썸네일을 상하로 배치 */
+	align-items: center; /* 수평 중앙 정렬 (필요에 따라 제거) */
+	height: 100%; /* 카드 전체 높이를 사용 */
 	width: 100%; /* 카드가 가로로 잘 맞도록 */
 	background-color: #f9f9f9;
 	padding: 20px;
-	border-top: 7px solid #010101;
+	border-top: 7px solid #656565;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	text-align: left;
-	display: flex;
-	flex-direction: column;
+	text-align: left; 
 	justify-content: space-between; 
 	height: 100%; /* 카드의 높이를 동일하게 설정 */
   aspect-ratio: 3 / 4; /* 비율을 3:4로 설정 */ 
+
+
 
 	.round {
 		font: 900 2rem/1 'Roboto';
@@ -239,17 +246,26 @@ top: 60px;
 		margin-left: 0px;
 		width: 10px;
 		height: 10px;
-
- 
 		border-radius: 50%;
 		margin-right: 8px;
 		display: inline-block;
 	}
+
+	.content-wrapper {
+		flex-grow: 1; /* 텍스트 영역이 남은 공간을 차지하게 함 */
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 5vh; /* 아이콘과 텍스트 사이 간격 조정 */
+	}
+
 	 h3 {
 		height: 20px;
-		font: 0.9rem/1 'Roboto';
+		font: 1.2rem/1.2 'Roboto';
  		color: #a5a2a2;
 		line-height: 1.2;
+ 		margin: 0;
+ 
 	}
 	.txt p {
 		font: 0.9rem/1.3 'Roboto';
@@ -264,14 +280,8 @@ top: 60px;
 		padding: 10px, 0px;
 		font-size: 0.7rem;
 		color: #888; 
+		margin-top: auto; /* 날짜를 아래쪽에 배치 */
 	}
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 20px; 
 }
 
 
@@ -279,16 +289,18 @@ top: 60px;
 	width: 100%;
 	height: 180px; /* Set a height to match the ratio */
 	aspect-ratio: 16/9;
-	object-fit: cover; /* 이미지 크기 조정 */
-	margin-top: 15px; 
- 
-
+ 	margin-bottom: auto;
   background-color: #333;
-  display: block;
+	margin-top: auto; /* 썸네일을 카드의 하단으로 */
+	object-fit: cover; /* 이미지 크기 조정 */
+	margin-top: 10px; /* 썸네일과 텍스트 사이 여백 */
 }
 
 /* 반응형: 화면이 좁아질 때 2열로 배치 */
 @media screen and (max-width: $tablet) {
+	.wrap2 {
+		width: 100%;	
+	}
 	.auto {
 		bottom: 30px;
 		left: 20px;
@@ -310,6 +322,15 @@ top: 60px;
 
 /* 반응형: 더 좁아질 때 1열로 배치 */
 @media screen and (max-width: $mobile) {
+	.swiper-slide {
+		width: 100%;
+		height: 300px;
+		margin-top: 0;
+		top: auto;
+	}
+	.wrap2 {
+		width: 100%;	
+	}
 	.auto {
 		bottom: 20px;
 		left: 10px;
@@ -331,7 +352,4 @@ top: 60px;
  
 
 
-
-
-
-
+ 

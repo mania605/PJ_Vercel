@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+KR:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+ 
 
-$margin: 150px!important;
-
-
-main.main{	
+.main2{	
 	width: 100%;
 	padding: 10vh 15vw;
 	min-height: 120vh;
@@ -16,7 +14,8 @@ main.main{
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: $margin;
+	margin-left: 100px!important;
+	margin-bottom: 150px!important;
 	margin-top: 15vh;
 	word-break: keep-all; /* 단어 단위로 줄바꿈 유지 */
 	.story {
@@ -76,7 +75,7 @@ main.main{
 	justify-content: space-between;
 	align-items: center;
 	color: #777;
-	margin-bottom: $margin;
+	margin-bottom: 150px!important;
 	.mid_1-1 {
 		width: 50%;
 		display: flex;
@@ -134,7 +133,7 @@ main.main{
 	flex-wrap: wrap;
 	justify-content: flex-end;
 	color: #777;
-	margin-bottom: $margin;
+	margin-bottom: 150px!important;
 	article {
 		width: 30%;
 		margin: 40px;
@@ -164,7 +163,7 @@ main.main{
 .last {
 	width: 100%;
 	height: 300px;
-	margin-bottom: $margin;
+	margin-bottom: 150px!important;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
