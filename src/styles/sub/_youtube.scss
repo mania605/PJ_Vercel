@@ -170,12 +170,10 @@ top: 60px;
 	}
 
 	.swiper-pagination-fraction {
-		
-		top: 50px ;
-		bottom: auto ;
-		left: auto ;
-		right: 20vh ;
-		width: auto !important;
+		left: 50%; /* 좌우 중앙으로 설정 */
+		bottom: 50px;
+    transform: translateX(-50%); /* 정확히 중앙에 위치시키기 위해 사용 */
+    width: auto !important; 
 		font-size: 16px;
 		font-family: 'orbitron';
 		letter-spacing: 1px;
