@@ -204,6 +204,7 @@ main {
 .videobox{
 	position:relative;
 	margin-top: 50px;
+	margin-right: 20px;
 	width: 100%;
 	background-color: #000000;
 	opacity: 1 ;
@@ -211,6 +212,7 @@ main {
 }
 
 .video-grid {
+	width: 100%;
 	display: grid;
   grid-template-columns: repeat(4, 1fr);
 	grid-template-columns: repeat(auto-fit, minmax(4, 1fr)); /* 반응형에서 유연하게 줄어듦 */
@@ -230,6 +232,7 @@ main {
 	width: 100%; /* 카드가 가로로 잘 맞도록 */
 	background-color: #f9f9f9;
 	padding: 20px;
+
 	border-top: 7px solid #656565;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	text-align: left; 
