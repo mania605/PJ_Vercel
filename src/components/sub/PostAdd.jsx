@@ -3,7 +3,7 @@ import Layout from '../common/Layout';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-export default function PostsAdd() {
+export default function PostAdd() {
 	const navigate = useNavigate();
 	const ref_title = useRef(null);
 	const ref_body = useRef(null);
@@ -21,7 +21,9 @@ export default function PostsAdd() {
 		console.log(postData);
 
 		axios
-			.post('http://localhost:8000/posts', postData)
+		//https://post-1htn.onrender.com/
+		//http://localhost:8000/
+			.post('https://post-1htn.onrender.com/posts', postData)
 			.then(res => {
 				console.log(res);
 				navigate('/post');
@@ -43,9 +45,8 @@ export default function PostsAdd() {
 				</select>
 				<br />
 
-
-				<input type='submit' value='전송' />
 				<input type='reset' value='취소' />
+				<input type='submit' value='전송' />
 			</form>
 		</Layout>
 	);

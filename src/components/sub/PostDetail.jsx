@@ -3,7 +3,7 @@ import Layout from '../common/Layout';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function PostsDetail() {
+export default function PostDetail() {
 	const navigate = useNavigate();
 	const { slug } = useParams();
 	const [Detail, setDetail] = useState(null);
@@ -12,18 +12,23 @@ export default function PostsDetail() {
 	const handleDelete = () => {
 		if (!window.confirm('게시글을 삭제하겠습니가?')) return;
 		axios
-			.delete(`http://localhost:8000/posts/${slug}/`)
+
+		//http://localhost:8000
+		//https://post-1htn.onrender.com/
+			.delete(`https://post-1htn.onrender.com/posts/${slug}/`)
 			.then(res => {
 				console.log(res);
 				//글 삭제 완료시 포스트목록 컴포넌트로 강제 이동
-				navigate('/posts');
+				navigate('/post');
 			})
 			.catch(err => console.log(err));
 	};
 
 	//상세페이지 마운트시 자동으로 상세데이터 가져옴
-	useEffect(() => {
-		axios.get(`http://localhost:8000/posts/${slug}`).then(res => {
+	useEffect(() => {		
+		//http://localhost:8000
+		//https://post-1htn.onrender.com/
+		axios.get(`/https://post-1htn.onrender.com/posts/${slug}`).then(res => {
 			setDetail(res.data);
 		});
 	}, []);

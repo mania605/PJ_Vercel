@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import SplitText from '../common/SplitText';
-import ButtonPath from '../../hooks/useNavigater';
+import ButtonPath from '../../hooks/useNavigator';
 
 export default function BrandStory() {
 	const memberData = [

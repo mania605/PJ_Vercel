@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigator } from 'react-router-dom';
 
 // imformation - Product videos - youtube
 export default function ButtonPath() {
-	const navigate = useNavigate();
+	const navigator = useNavigator();
 
 	// 버튼 정보 배열
 	const buttons = [
@@ -14,7 +14,7 @@ export default function ButtonPath() {
 		<div className='buttons'>
 			{/* 버튼 생성 */}
 			{buttons.map((button, index) => (
-				<button key={index} onClick={() => navigate(button.path)}>
+				<button key={index} onClick={() => navigator(button.path)}>
 					{button.label}
 				</button>
 			))}
