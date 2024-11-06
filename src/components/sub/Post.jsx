@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Post() {
-	const [Posts, setPosts] = useState([]);
-	const [SearchText, setSearchText] = useState('');
-	const [Category, setCategory] = useState('');
+	const [Posts, setPosts] = useState([]); // 전체 포스트 데이터
+	const [SearchText, setSearchText] = useState(''); // 검색 텍스트
+	const [Category, setCategory] = useState(''); // 카테고리 필터링
 	console.log(Posts);
 
 	const fetchAllPosts = () => {
@@ -49,13 +49,18 @@ export default function Post() {
 			.catch(err => console.log(err.message));
 	}, [SearchText]);
 
+
+	
 	return (
 		<Layout title='Post'>
 			<article className='controll'>
+
 				{/* 게시글 검색 폼 */}
 				<form className='searchBox' onSubmit={handleSubmit}>
-					<input type='text' />
-					<button>Search</button>
+				<div className="searchline">
+					<input type='text' name="input" id="search-input" placeholder='검색어를 입력하세요' />
+					<button className='sbutton'>Search</button>
+					</div>
 				</form>
 
 				{/* 글 카테고리별 필터링 드롭다운 메뉴 */}
@@ -68,7 +73,7 @@ export default function Post() {
 				<br />
 
 				{/* 글 작성 버튼 */}
-				<button>
+				<button className='wbutton'>
 					<Link to='/post-add'>Write Post</Link>
 				</button>
 			</article>
