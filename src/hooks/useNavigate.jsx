@@ -1,8 +1,8 @@
-import { useNavigator } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // imformation - Product videos - youtube
 export default function ButtonPath() {
-	const navigator = useNavigator();
+	const navigator = useNavigate();
 
 	// 버튼 정보 배열
 	const buttons = [

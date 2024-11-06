@@ -1,0 +1,31 @@
+// 포스트 리스트 스타일
+.post {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	h2 {
+		width: 100%;
+		margin-bottom: 0px;
+	}
+
+	.controll {
+		width: 35%;
+	}
+	table {
+		width: 60%;
+
+		th {
+			padding: 10px 30px;
+			background: #333;
+			color: #fff;
+			text-align: left;
+		}
+
+		td {
+			padding: 10px 30px;
+			border-bottom: 1px solid #bbb;
+		}
+	}
+}
