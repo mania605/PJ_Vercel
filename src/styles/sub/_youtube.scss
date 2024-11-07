@@ -7,7 +7,7 @@ main {
 }
  
 	.content {
-		padding: 0px;
+		// padding: 0px;
 	}
  
 .wrap2 {
@@ -43,7 +43,7 @@ main {
 		li {
 			opacity: 0.8;
 			float: left;
-			margin-right: 20px;
+			margin-right: 10px;
 			cursor: pointer;
 			color: #fff;
 			font-size: 20px;
@@ -86,7 +86,7 @@ main {
 					height: 100%;
 					position: absolute;
 					top: 0;
-					left: 0;
+					left: 0; 
 					opacity: 0;
 					background: #fff;
 				}
@@ -208,16 +208,18 @@ main {
 	width: 100%;
 	background-color: #000000;
 	opacity: 1 ;
+	padding: 0; /* 여백 제거 */
+	display:flex ;
+	justify-content: center;
  
 }
 
 .video-grid {
 	width: 100%;
 	display: grid;
-  grid-template-columns: repeat(4, 1fr);
-	grid-template-columns: repeat(auto-fit, minmax(4, 1fr)); /* 반응형에서 유연하게 줄어듦 */
-	aspect-ratio: 16/9;
-  gap: 20px;
+grid-template-columns: repeat(4, 1fr);
+	aspect-ratio: 4/3;
+  gap: 30px;
 	margin-top: 20px;
 
 }
@@ -251,6 +253,7 @@ main {
 		height: 10px;
 		border-radius: 50%;
 		margin-right: 8px;
+		margin-bottom: 50px;
 		display: inline-block;
 	}
 
@@ -259,20 +262,19 @@ main {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		gap: 5vh; /* 아이콘과 텍스트 사이 간격 조정 */
+
 	}
 
 	 h3 {
-		height: 5vh;
+		height: 20px;
 		font: 1.2rem/1.2 'Roboto';
  		color: #a5a2a2;
-		line-height: 1.2;
- 		margin: 0;
+		line-height: 1.2; 
  
 	}
 	.txt p {
 		font: 0.9rem/1.3 'Roboto';
-		height: 5vh;
+		height: 20px;
  		color: #555; 
  		display: flex;
 		align-items: center; 
@@ -280,23 +282,21 @@ main {
 	}
 
 	.txt span {
-			height: 10vh;
- 		padding: 30px, 0px;
+		height: 10vh; 
 		font-size: 0.7rem;
-		color: #888; 
-
+		color: #888;  
 	}
 }
 
 
 .thumb {
-	width: 100%;
+	width: calc(100% - 0px); /* 왼쪽과 오른쪽에 10px씩 여백 */
 	height: 180px; /* Set a height to match the ratio */
-	aspect-ratio: 16/9;
+	aspect-ratio: 4/3;
  	margin-bottom: auto;
   background-color: #333;
 	margin-top: auto; /* 썸네일을 카드의 하단으로 */
-	object-fit: cover; /* 이미지 크기 조정 */
+	object-fit: contain; /* 썸네일이 잘리지 않도록 설정 */
 	margin-top: 10px; /* 썸네일과 텍스트 사이 여백 */
 }
 
@@ -310,7 +310,6 @@ main {
 		left: 20px;
 		li {
 			font-size: 16px;
-			margin-right: 10px;
 		}
 	}
 	.swiper-slide {
@@ -319,7 +318,7 @@ main {
 	}
 
     .video-grid {
-			 grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
     }
 
 	}
@@ -327,6 +326,8 @@ main {
 /* 반응형: 더 좁아질 때 1열로 배치 */
 @media screen and (max-width: $mobile) {
 	
+
+
 	.swiper-slide {
 		width: 100%;
 		height: 300px;
@@ -352,10 +353,19 @@ main {
 	}
  
     .video-grid {
-			grid-template-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형: 카드 최소 너비와 최대 너비 설정 */
     }
 } 
  
+h3 {
+	height: 2vh;
+}
+.txt p {
+ 	height: 2vh;  
+}
 
+.txt span {
+	height: 3vh;  
+}
 
  
