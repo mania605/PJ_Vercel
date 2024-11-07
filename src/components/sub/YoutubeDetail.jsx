@@ -29,7 +29,7 @@ export default function YoutubeDetail() {
 
 
 	return (
-		<div onClick={handleBackgroundClick} style={{ width: '100%', height: '100vh', cursor: 'pointer' }}>
+		<div onClick={handleBackgroundClick} className='container' style={{ width: '100%', height: '150vh', cursor: 'pointer' }}>
 			<Layout title={YoutubeVid?.snippet.title}>
  
 			<Content delay={1}>
