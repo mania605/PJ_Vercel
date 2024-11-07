@@ -217,7 +217,7 @@ main {
 .video-grid {
 	width: 100%;
 	display: grid;
-grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	aspect-ratio: 4/3;
   gap: 30px;
 	margin-top: 20px;
@@ -228,13 +228,11 @@ grid-template-columns: repeat(4, 1fr);
 .video-card {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between; /* 텍스트와 썸네일을 상하로 배치 */
-	align-items: center; /* 수평 중앙 정렬 (필요에 따라 제거) */
+	// justify-content: space-between; /* 텍스트와 썸네일을 상하로 배치 */
 	height: 100%; /* 카드 전체 높이를 사용 */
 	width: 100%; /* 카드가 가로로 잘 맞도록 */
 	background-color: #f9f9f9;
 	padding: 20px;
-
 	border-top: 7px solid #656565;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	text-align: left; 
@@ -266,7 +264,7 @@ grid-template-columns: repeat(4, 1fr);
 	}
 
 	 h3 {
-		height: 20px;
+		height: 90px;
 		font: 1.2rem/1.2 'Roboto';
  		color: #a5a2a2;
 		line-height: 1.2; 
@@ -274,7 +272,7 @@ grid-template-columns: repeat(4, 1fr);
 	}
 	.txt p {
 		font: 0.9rem/1.3 'Roboto';
-		height: 20px;
+		height: 70px;
  		color: #555; 
  		display: flex;
 		align-items: center; 
@@ -282,7 +280,7 @@ grid-template-columns: repeat(4, 1fr);
 	}
 
 	.txt span {
-		height: 10vh; 
+		height: 50px; 
 		font-size: 0.7rem;
 		color: #888;  
 	}
@@ -290,7 +288,7 @@ grid-template-columns: repeat(4, 1fr);
 
 
 .thumb {
-	width: calc(100% - 0px); /* 왼쪽과 오른쪽에 10px씩 여백 */
+	width: 100%;
 	height: 200px; /* Set a height to match the ratio */
 	aspect-ratio: 4/3;
  	margin-bottom: auto;
@@ -353,7 +351,7 @@ grid-template-columns: repeat(4, 1fr);
 	}
  
     .video-grid {
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형: 카드 최소 너비와 최대 너비 설정 */
+			grid-template-columns: repeat(1, 1fr); /* 반응형: 카드 최소 너비와 최대 너비 설정 */
     }
 		h3 {
 			height: 2vh; 
