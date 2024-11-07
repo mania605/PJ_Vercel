@@ -97,7 +97,7 @@ export default function Youtube() {
 				<div className="inner">
 					<div className="con">
 						<img src="/thumb1.png" alt="AVALLION" />
-						<h3>AVALLION</h3>
+						<h4>AVALLION</h4>
 						<p>STEP INTO POSSIBILITIES</p>
 					</div>
 				</div>
@@ -110,7 +110,7 @@ export default function Youtube() {
 					<div className="con">
 					<a href=" https://youtu.be/0XPfwjw0z-Q?si=n7z9YK4bfkZoo7dL"></a>
 						<img src="/thumb2.png" alt="PERFUME DESIGNER" />
-						<h3>CREMA NERA</h3>
+						<h4>CREMA NERA</h4>
 						<p>HIGH-PRECISION SKIN REVIVAL</p>
 					</div>
 				</div>
@@ -122,7 +122,7 @@ export default function Youtube() {
 				<div className="inner">
 					<div className="con">
  						<img src="/thumb3.png" alt="LIMITLESS" />
-						<h3>LIMITLESS POTENTIAL</h3>
+						<h4>LIMITLESS POTENTIAL</h4>
 						<p>FIRST FRAGRANCE</p>
 									</div>
 				</div>
@@ -132,7 +132,7 @@ export default function Youtube() {
  				<div className="inner">
 					<div className="con">
  						<img src="/thumb4.png" alt="AVALLION" />
-						<h3>AVALLION</h3>
+						<h4>AVALLION</h4>
 						<p>FIRST FRAGRANCE</p>
 					</div>
 				</div>
@@ -142,7 +142,7 @@ export default function Youtube() {
  				<div className="inner">
 					<div className="con">
 						<img src="/thumb5.png" alt="STEP INTO POSSIBILITIES" />
-						<h3>STEP INTO POSSIBILITIES</h3>
+						<h4>STEP INTO POSSIBILITIES</h4>
 						<p>BRAND STORY</p>
 					</div>
 				</div>

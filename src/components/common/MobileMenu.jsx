@@ -58,7 +58,7 @@ export default function MobileMenu() {
 					</Link>
 				</li>
 				<li>
-					<Link to='/posts'>
+					<Link to='/post'>
 						Posts
 					</Link>
 				</li>

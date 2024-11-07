@@ -26,8 +26,8 @@ main {
 		color: #fff;
 		letter-spacing: 1px;
 		position: absolute;
-		left: 40px;
-		top: 40px;
+		left: 30px;
+		top: 30px;
 
 		span {
 			opacity: 0.8;
@@ -36,7 +36,7 @@ main {
 
 	.auto {
 		position: absolute;
-		top: 40px;
+		top: 30px;
 		left: 280px;
 		z-index: 20;
 
@@ -100,13 +100,12 @@ main {
 						aspect-ratio: 16/9;
 					}
 
-					h2 {
+					h4{
 						font-weight: normal;
 						font-size: 40px;
-						font-family: 'roboto';
-						color: #111;
-						margin-top: 10px;
-						margin-bottom: 10px;
+						font:150 1.5rem/1 'roboto';
+						color: #a9a9a9;
+		 
 
 						&::after {
 							content: '';
@@ -114,12 +113,13 @@ main {
 							width: 30px;
 							height: 1px;
 							background-color: #888;
-							margin-top: 15px;
+							margin-top: 10px;
 							transition: 1s 0.5s;
 						}
 					}
 
 					p {
+						top: 0px;
 						font-weight: normal;
 						font-size: 12px;
 						font-family: 'arial';
@@ -206,9 +206,9 @@ main {
 	margin-top: 50px;
 	margin-right: 20px;
 	width: 100%;
+	height: 100%;
 	background-color: #000000;
-	opacity: 1 ;
-	padding: 0; /* 여백 제거 */
+ 	padding: 0; /* 여백 제거 */
 	display:flex ;
 	justify-content: center;
  
@@ -291,7 +291,7 @@ grid-template-columns: repeat(4, 1fr);
 
 .thumb {
 	width: calc(100% - 0px); /* 왼쪽과 오른쪽에 10px씩 여백 */
-	height: 180px; /* Set a height to match the ratio */
+	height: 200px; /* Set a height to match the ratio */
 	aspect-ratio: 4/3;
  	margin-bottom: auto;
   background-color: #333;
@@ -355,17 +355,18 @@ grid-template-columns: repeat(4, 1fr);
     .video-grid {
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형: 카드 최소 너비와 최대 너비 설정 */
     }
+		h3 {
+			height: 2vh; 
+		}
+		.txt p {
+			 height: 2vh;   
+		}
+		
+		.txt span {
+			height: 3vh;   
+		}
+		
 } 
  
-h3 {
-	height: 2vh;
-}
-.txt p {
- 	height: 2vh;  
-}
-
-.txt span {
-	height: 3vh;  
-}
 
  

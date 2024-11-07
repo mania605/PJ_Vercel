@@ -67,6 +67,7 @@ export default function PostEdit() {
 				<input type='reset' value='수정취소' onClick={() => navigate(-1)} />
 				<input type='submit' value='수정' />
 			</form>
+ 
 		</Layout>
 	);
 }

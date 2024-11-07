@@ -35,16 +35,19 @@ export default function PostDetail() {
 
 	return (
 		<Layout title='Posts Detail'>
-			<section>
-				<h3>{Detail?.title}</h3>
-				<p>{Detail?.body}</p>
-				<span>Created : {Detail?.created.split('T')[0]}</span>
+			
+			<div className="postdetail">
+			<section classname='section'>
+				<h3 calssname='detailh3'>{Detail?.title}</h3>
+				<p calssname ='detailp'>{Detail?.body}</p>
+				<span className='detailspan'>Created : {Detail?.created.split('T')[0]}</span>
 			</section>
 
 			<button>
 				<Link to={`/post-edit/${slug}`}>Edit</Link>
 			</button>
 			<button onClick={handleDelete}>Delete</button>
+			</div>
 		</Layout>
 	);
 }
