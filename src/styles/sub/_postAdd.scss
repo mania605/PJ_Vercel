@@ -1,108 +1,87 @@
-/* 전체 폼 스타일 */
+/* 전체 레이아웃 설정 */
+body {
+	background-color: #000000;
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff;
+	margin: 0;
+	width: 100%;
+}
+
+/* Add Post 페이지 레이아웃 */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  max-height: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	width: 80%;
+	max-width: 800px;
+	margin: 40px auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
-/* 제목 입력 필드 스타일 */
-form input[type="text"],
-form select,
-form textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 0.3s;
+input[type='text'],
+textarea,
+select {
+	width: 100%;
+	padding: 12px;
+	font-size: 1rem;
+	color: #ffffff;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #ffffff;
+	outline: none;
+	resize: none;
+	
+	&::placeholder {
+		color: #888888;
+	}
 }
 
-/* select 요소 왼쪽 정렬 및 50% 너비 설정 */
-form select {
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 50%; /* 50% 너비로 설정 */
-  background-color: #fff;
-  text-align: left; /* 기본 왼쪽 정렬 */
-  margin-left: 0; /* 왼쪽 여백 제거 */
-  cursor: pointer;
+/* 텍스트 입력 필드 */
+input[type='text'] {
+	font-size: 1.2rem;
 }
 
-/* 전체 폼 필드 통일 스타일 */
-form input[type="text"],
-form textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-  margin-left: 0; /* 왼쪽 여백 통일 */
+textarea {
+	height: 150px;
 }
 
-/* 포커스 시 효과 */
-form input[type="text"]:focus,
-form select:focus,
-form textarea:focus {
-  border-color: #81b8f3;
-}
-
-/* 텍스트 영역 스타일 */
-form textarea {
-  height: 120px;
-  resize: vertical;
-  font-family: Arial, sans-serif;
-}
-
-/* 드롭다운 스타일 */
-form select {
-  background-color: #fff;
-  cursor: pointer;
+/* 카테고리 선택 드롭다운 */
+select {
+	width: 50%;
+	color: #888888;
+	background-color: transparent;
+	font-size: 1rem;
+	border: 2px solid #ffffff;
+	appearance: none;
+	cursor: pointer;
 }
 
 /* 버튼 스타일 */
-form input[type="reset"],
-form input[type="submit"] {
-  padding: 10px 20px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+input[type='submit'],
+input[type='reset'] {
+	width: 100px;
+	padding: 10px;
+	margin-top: 20px;
+	border: 2px solid #ffffff;
+	background-color: transparent;
+	color: #ffffff;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+
+	&:hover {
+		background-color: #333333;
+		color: #ffffff;
+	}
 }
 
-/* 전송 버튼 스타일 */
-form input[type="submit"] {
-  background-color: #313234;
-  opacity: 0.8;
-  color: white;
-  width: 100%;
-}
+/* Reset 버튼 스타일 */
+input[type='reset'] {
+	margin-left: 10px;
+	color: #ff6666;
+	border-color: #ff6666;
 
-form input[type="submit"]:hover {
-  background-color: #71aff1;
-  opacity: 0.8;
-  color: white;
-  max-width: 200px;
-}
-
-/* 리셋 버튼 스타일 */
-form input[type="reset"] {
-  background-color: #220b0d;
-  opacity: 0.8;
-  color: white;
-  width: 100%;
-}
-
-form input[type="reset"]:hover {
-  background-color: #c82333;
-  opacity: 0.8;
-  width: 100%;
+	&:hover {
+		background-color: #ff6666;
+		color: #ffffff;
+	}
 }

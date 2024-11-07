@@ -32,8 +32,8 @@ body {
 	#root {
 		width: 100%;
 		overflow-x: hidden;
-		padding: 0px;
-		margin : 0px;
+		padding: 0px !important;
+		margin : 0px !important;
 	}
 }
 ::-webkit-scrollbar {

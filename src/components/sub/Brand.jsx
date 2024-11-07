@@ -91,7 +91,7 @@ export default function BrandStory() {
 			<article className='ceoBox'>
 				<div className='story'>
 					<nav className='ceoTitle'>
-						<SplitText style={{ margin: '25px 0px', fontFamily: 'Noto Serif KR', fontWeight: 'bold', fontSize: '1.8rem', color: `rgba(var(--keyRGB))` }}>
+						<SplitText style={{ margin: '25px 0px', fontFamily: 'Noto Serif KR', fontWeight: 'bold', fontSize: '3rem', color: `rgba(var(--keyRGB))` }}>
 							향기의 권위자 Angelo의
 						</SplitText>
 						{isFirstTextRendered && (
