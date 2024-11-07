@@ -49,14 +49,13 @@ textarea {
 
 /* 카테고리 선택 드롭다운 */
 select {
-	width: 100%;
-	color: #5b5959;
-	background-color: transparent;
-	font-size: 1rem;
-	border: none;
-	border-bottom: 2px solid #ffffff;
-	appearance: none;
-	cursor: pointer;
+	width: 35%;
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #696969;
+	background-color: transparent; 
+	box-sizing: border-box;
 }
 
 /* 버튼 컨테이너 */

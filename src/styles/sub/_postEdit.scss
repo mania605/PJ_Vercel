@@ -24,8 +24,8 @@ input[type='text'],
 textarea {
 	width: 100%;
 	padding: 12px;
-	font-size: 1rem;
-	color: #ffffff;
+	font-size: 1rem; 
+	color: #b1afaf;
 	background-color: transparent;
 	border: none;
 	border-bottom: 2px solid #ffffff;
@@ -49,14 +49,17 @@ textarea {
 
 /* 드롭다운 스타일 */
 select {
-	color: #ffffff;
-	background-color: transparent;
-	font-size: 1rem;
-	border: none;
-	border-bottom: 2px solid #ffffff;
-	appearance: none;
-	cursor: pointer;
-}
+ 		width: 35%;
+		padding: 10px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		color: #696969;
+		background-color: transparent; 
+		box-sizing: border-box;
+	}
+	
+	
+ 
 
 /* 버튼 스타일 */
 input[type='submit'],

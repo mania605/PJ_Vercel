@@ -47,6 +47,7 @@ export default function PostAdd() {
 
 				<input type='reset' value='취소' />
 				<input type='submit' value='전송' />
+ 
 			</form>
 		</Layout>
 	);
