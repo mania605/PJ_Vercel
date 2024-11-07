@@ -33,12 +33,12 @@ export default function PostAdd() {
 
 	return (
 		<Layout title='Add Post'>
-			<form onSubmit={handleSubmit}>
+			<form className='addpost' onSubmit={handleSubmit}>
 				<input ref={ref_title} type='text' name='title' id='title' placeholder='제목입력하세요.' />
 				<br />
 				<textarea ref={ref_body} name='body' id='body' placeholder='본문을 입력하세요'></textarea>
 				<br />
-				<select name='category' id='category' ref={ref_category}>
+				<select className='dropdown' name='category' id='category' ref={ref_category}>
 					<option value='PERSONAL'>Personal</option>
 					<option value='BUSINESS'>Busniness</option>
 					<option value='IMPORTANT'>Important</option>

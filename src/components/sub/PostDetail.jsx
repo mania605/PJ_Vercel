@@ -28,7 +28,7 @@ export default function PostDetail() {
 	useEffect(() => {		
 		//http://localhost:8000
 		//https://post-1htn.onrender.com/
-		axios.get(`/https://post-1htn.onrender.com/posts/${slug}`).then(res => {
+		axios.get(`https://post-1htn.onrender.com/posts/${slug}`).then(res => {
 			setDetail(res.data);
 		});
 	}, []);
@@ -42,7 +42,7 @@ export default function PostDetail() {
 			</section>
 
 			<button>
-				<Link to={`/postEdit/${slug}`}>Edit</Link>
+				<Link to={`/post-edit/${slug}`}>Edit</Link>
 			</button>
 			<button onClick={handleDelete}>Delete</button>
 		</Layout>

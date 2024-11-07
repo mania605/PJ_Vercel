@@ -24,7 +24,7 @@ export default function PostEdit() {
 		axios
 		//https://post-1htn.onrender.com/
 //http://localhost:8000/ 
-			.put(`/https://post-1htn.onrender.com/posts/${slug}/`, editData)
+			.put(`https://post-1htn.onrender.com/posts/${slug}/`, editData)
 			.then(res => {
 				console.log(res);
 				navigate('/post');

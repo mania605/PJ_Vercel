@@ -26,7 +26,7 @@ body {
 .searchBox {
 	height: 30px; /* 높이 설정 */
 	width: 100%;
-	background-color: transparent;
+		background-color: transparent;
 	border: none; 
 	display: flex;
 	flex-wrap: wrap;
@@ -53,7 +53,7 @@ body {
 
 /* 검색 버튼 */
 .sbutton {
-	width: 100px;
+	width: 150px;
 	height: 50px; /* 검색창과 같은 높이 */
 	font-size: 1rem;
 	border: 2px solid #ffffff;
@@ -67,44 +67,40 @@ body {
 }
 
 .sbutton:hover {
-	background-color: #333333;
+	background-color: #000000;
 	color: #ffffff;
 }
 
 /* 드롭다운 스타일 */
 select {
+	width: 35%;
 	padding: 10px;
 	margin-top: 30px;
-	margin-left: 20px;
-	color: #757575;
+	margin-bottom: 30px;
+	color: #1d1d1d;
 	background-color: transparent; 
 	box-sizing: border-box;
-	display: flex;
-	flex-wrap: wrap;
+ 
 	
 }
 
-.section
-{	font-family: 'ariel';}
-
+ 
 /* 글 작성 버튼 스타일 */
 .wbutton {
-
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: 20px;
-	padding: 10px 20px;
-	background-color: transparent;
-	color: #ffffff;
-	cursor: pointer;
+	width: 150px;
+	height: 50px; /* 검색창과 같은 높이 */
+	font-size: 1rem;
 	border: 2px solid #ffffff;
-	transition: color 0.3s, background-color 0.3s;
+	background-color: transparent;
+	color: #c4c4c4;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
 	box-sizing: border-box;
-	
 }
 
 .wbutton:hover {
-	background-color: #333333;
+	background-color: #b2b0b0;
 	color: #ffffff;
 }
 

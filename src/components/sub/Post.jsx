@@ -64,7 +64,7 @@ export default function Post() {
 				</form>
 
 				{/* 글 카테고리별 필터링 드롭다운 메뉴 */}
-				<select width='30%' onChange={e => setCategory(e.target.value)}>
+				<select onChange={e => setCategory(e.target.value)}>
 					<option value=''>All POSTS</option>
 					<option value='BUSINESS'>Business</option>
 					<option value='PERSONAL'>Personal</option>

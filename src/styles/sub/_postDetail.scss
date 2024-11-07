@@ -5,60 +5,67 @@ body {
 	color: #ffffff;
 	margin: 0;
 	width: 100%;
+	margin: 40px;
 }
 
 /* Detail 페이지 레이아웃 */
 .section {
-	width: 80%;
+
+	width: 70%;
 	max-width: 800px;
 	margin: 40px auto;
 	padding: 20px;
-	background-color: #1a1a1a;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	background-color: #121212; /* 더 어두운 배경 */
+	border-radius: 6px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 가벼운 그림자 */
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 15px;
 }
 
+/* 제목 스타일 */
 h3 {
-	font-size: 2rem;
-	margin-bottom: 10px;
-	border-bottom: 2px solid #333333;
-	padding-bottom: 10px;
-	color: #ffffff;
+	font-size: 1.8rem;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #333333;
+	padding-bottom: 8px;
+	color: #e0e0e0;
+	font-weight: 500;
 }
 
+/* 본문 스타일 */
 p {
 	font-size: 1rem;
-	line-height: 1.6;
-	color: #bbbbbb;
+	line-height: 1.5;
+	color: #cccccc;
+	margin-top: 10px;
 }
 
+/* 날짜 스타일 */
 span {
-	font-size: 0.9rem;
-	color: #888888;
-	margin-top: 10px;
+	font-size: 0.85rem;
+	color: #777777;
+	margin-top: 5px;
 }
 
 /* 버튼 스타일 */
 button {
-	width: 100px;
-	padding: 10px;
-	margin-top: 20px;
-	border: 2px solid #ffffff;
+	width: 90px;
+	padding: 8px;
+	margin-top: 15px;
+	border: 1px solid #ffffff;
 	background-color: transparent;
 	color: #ffffff;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.2s, color 0.2s;
 	display: inline-block;
 	text-align: center;
 	margin-right: 10px;
 
 	&:hover {
-		background-color: #333333;
-		color: #ffffff;
+		background-color: #ffffff;
+		color: #000000;
 	}
 }
 
@@ -72,7 +79,7 @@ button a {
 a {
 	color: #ffffff;
 	text-decoration: none;
-	transition: color 0.3s;
+	transition: color 0.2s;
 
 	&:hover {
 		color: #cccccc;
@@ -81,7 +88,7 @@ a {
 
 /* 반응형 스타일 */
 @media (max-width: 600px) {
-	section {
+	.section {
 		width: 90%;
 		padding: 15px;
 	}
@@ -97,6 +104,6 @@ a {
 	button {
 		width: 80px;
 		padding: 8px;
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 	}
 }

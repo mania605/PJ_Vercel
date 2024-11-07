@@ -37,8 +37,8 @@ export default function App() {
 					<Route path='/backgroundVideo' element={<BackgroundVideo />} />
 					<Route path='/post' element={<Post />} />
 					<Route path='/post/:slug' element={<PostDetail />} />
-					<Route path='/postAdd' element={<PostAdd />} />
-					<Route path='/postEdit/:slug' element={<PostEdit />} />
+					<Route path='/post-add' element={<PostAdd />} />
+					<Route path='/post-edit/:slug' element={<PostEdit />} />
 				</Routes>
 			</AnimatePresence>
  
