@@ -1,9 +1,9 @@
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
 import Home from './components/main/Home';
-import Product from './components/sub/Product';
-import Manual from './pages/Manual';
-import Brand from './components/sub/Brand';
+// import Product from './components/sub/Product';
+// import Manual from './pages/Manual';
+// import Brand from './components/sub/Brand';
 import Youtube from './components/sub/Youtube';
 import Contact from './components/sub/Contact';
 import Post from './components/sub/Post';
@@ -14,7 +14,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import MobileMenu from './components/common/MobileMenu';
 import { useZustandStore } from './hooks/useZustand'; 
-import BackgroundVideo from './components/sub/backgroundVideo';
+// import BackgroundVideo from './components/sub/backgroundVideo';
 import YoutubeDetail from './components/sub/YoutubeDetail';
 
 export default function App() {
@@ -28,13 +28,13 @@ export default function App() {
 			<AnimatePresence mode='wait'>
 				<Routes location={location} key={location.pathname}>
 					<Route path='/' element={<Home />} />
-					<Route path='/brand' element={<Brand />} />
-					<Route path='/product' element={<Product />} />
-					<Route path='/manual' element={<Manual />} />
+					{/* <Route path='/brand' element={<Brand />} /> */}
+					{/* <Route path='/product' element={<Product />} /> */}
+					{/* <Route path='/manual' element={<Manual />} /> */}
 					<Route path='/youtube' element={<Youtube />} />
 					<Route path='/youtube/:id' element={<YoutubeDetail />} />
 					<Route path='/contact' element={<Contact />} />
-					<Route path='/backgroundVideo' element={<BackgroundVideo />} />
+					{/* <Route path='/backgroundVideo' element={<BackgroundVideo />} /> */}
 					<Route path='/post' element={<Post />} />
 					<Route path='/post/:slug' element={<PostDetail />} />
 					<Route path='/post-add' element={<PostAdd />} />

@@ -43,14 +43,14 @@ $mobile: 599px;
 
 //main
 @import './main/home';
-@import './main/visual'; 
-@import './main/pics';
-@import './main/vids';
+// @import './main/visual'; 
+// @import './main/pics';
+// @import './main/vids';
 
 //sub
-@import './sub/brand';
-@import './sub/product';
-@import './sub/backgroundVideo';
+// @import './sub/brand';
+// @import './sub/product';
+// @import './sub/backgroundVideo';
 @import './sub/youtube'; 
 @import './sub/post';
 @import './sub/postAdd';
@@ -59,11 +59,11 @@ $mobile: 599px;
 
 
 //pages
-@import './pages/gallerymotion';
-@import './pages/manual';
-@import './pages/news';
-@import './pages/pics';
-@import './pages/visual';
+// @import './pages/gallerymotion';
+// @import './pages/manual';
+// @import './pages/news';
+// @import './pages/pics';
+// @import './pages/visual';
 
 // src\pages\Gallerymotion.jsx
 // src\pages\Manual.jsx

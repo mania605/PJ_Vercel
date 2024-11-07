@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+// import { useEffect, useRef, useState } from 'react';
 // import News from '../../pages/News';
-import Pics from '../../pages/Pics';
-import Visual from '../../pages/Visual';
+// import Pics from '../../pages/Pics';
+// import Visual from '../../pages/Visual';
+import Youtube from '../sub/Youtube';
 
 
 export default function Home() {
@@ -34,9 +35,8 @@ export default function Home() {
 
 	return (
 		// <div ref={ref_wrap}>
-		<div>
-			<Visual/>
-			<Pics/>
+		<div classname="homehead" >
+		<Youtube />
 			{/* <Visual Scroll={Scroll} />
 			<Pics Scroll={Scroll} pos={ref_posArr.current[1]} /> */}
 			{/* <News Scroll={Scroll} pos={ref_posArr.current[2]} /> */}
